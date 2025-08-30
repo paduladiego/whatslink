@@ -7,49 +7,49 @@
 
 :root {
     /* Dark futuristic theme - WhatsApp Tech */
-    --background: hsl(220, 27%, 8%);
-    --foreground: hsl(155, 85%, 95%);
+    --background: #0f131a;
+    --foreground: #e7fdf4;
     
-    --card: hsl(220, 25%, 12%);
-    --card-foreground: hsl(155, 85%, 95%);
+    --card: #171c26;
+    --card-foreground: #e7fdf4;
     
-    --primary: hsl(142, 76%, 36%);
-    --primary-foreground: hsl(220, 27%, 8%);
+    --primary: #16a249;
+    --primary-foreground: #0f131a;
     
-    --secondary: hsl(220, 20%, 16%);
-    --secondary-foreground: hsl(155, 85%, 95%);
+    --secondary: #212631;
+    --secondary-foreground: #e7fdf4;
     
-    --muted: hsl(220, 15%, 20%);
-    --muted-foreground: hsl(155, 25%, 65%);
+    --muted: #2b303b;
+    --muted-foreground: #8fbca9;
     
-    --accent: hsl(195, 100%, 50%);
-    --accent-foreground: hsl(220, 27%, 8%);
+    --accent: #00bfff;
+    --accent-foreground: #0f131a;
     
-    --destructive: hsl(0, 84%, 60%);
-    --destructive-foreground: hsl(210, 40%, 98%);
+    --destructive: #ef4343;
+    --destructive-foreground: #f8fafc;
     
-    --border: hsl(220, 15%, 25%);
-    --input: hsl(220, 15%, 18%);
-    --ring: hsl(142, 76%, 36%);
+    --border: #363d49;
+    --input: #272c35;
+    --ring: #16a249;
     
     /* Custom futuristic tokens */
-    --whatsapp: hsl(142, 76%, 36%);
-    --whatsapp-dark: hsl(142, 76%, 28%);
-    --neon-blue: hsl(195, 100%, 50%);
-    --neon-cyan: hsl(180, 100%, 50%);
-    --tech-gray: hsl(220, 15%, 20%);
-    --tech-dark: hsl(220, 27%, 8%);
+    --whatsapp: #16a249;
+    --whatsapp-dark: #117e39;
+    --neon-blue: #00bfff;
+    --neon-cyan: #00ffff;
+    --tech-gray: #2b303b;
+    --tech-dark: #0f131a;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220, 27%, 8%), hsl(220, 20%, 12%));
-    --gradient-whatsapp: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 76%, 42%));
-    --gradient-neon: linear-gradient(90deg, hsl(195, 100%, 50%), hsl(180, 100%, 50%));
-    --gradient-card: linear-gradient(145deg, hsl(220, 25%, 12%), hsl(220, 15%, 18%));
+    --gradient-hero: linear-gradient(135deg, #0f131a, #181d25);
+    --gradient-whatsapp: linear-gradient(135deg, #16a249, #1abc55);
+    --gradient-neon: linear-gradient(90deg, #00bfff, #00ffff);
+    --gradient-card: linear-gradient(145deg, #171c26, #272c35);
     
     /* Shadows */
-    --shadow-neon: 0 0 30px hsl(195, 100%, 50%, 0.3);
-    --shadow-whatsapp: 0 0 20px hsl(142, 76%, 36%, 0.4);
-    --shadow-card: 0 8px 32px hsl(220, 27%, 8%, 0.5);
+    --shadow-neon: 0 0 30px rgba(0, 191, 255, 0.3);
+    --shadow-whatsapp: 0 0 20px rgba(22, 162, 73, 0.4);
+    --shadow-card: 0 8px 32px rgba(15, 19, 26, 0.5);
     
     --radius: 0.75rem;
 }
@@ -107,7 +107,7 @@ body {
 .bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, hsl(195, 100%, 50%, 0.05) 0%, transparent 50%, hsl(142, 76%, 36%, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, transparent 50%, rgba(22, 162, 73, 0.05) 100%);
 }
 
 .grid-pattern {
@@ -246,7 +246,7 @@ body {
 .form-input:focus {
     outline: none;
     border-color: var(--whatsapp);
-    box-shadow: 0 0 0 2px hsl(142, 76%, 36%, 0.2);
+    box-shadow: 0 0 0 2px rgba(22, 162, 73, 0.2);
     background: var(--tech-gray);
 }
 
