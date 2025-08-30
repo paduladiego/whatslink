@@ -90,9 +90,10 @@ body {
 }
 /* Hero section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     max-width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--gradient-hero);
@@ -101,7 +102,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .bg-overlay {
@@ -148,7 +149,7 @@ body {
 }
 
 .padula-one-icon {
-    padding: 1rem;
+    padding: .8rem;
     border-radius: 50%;
     background: var(--gradient-whatsapp);
     box-shadow: var(--shadow-whatsapp);
@@ -296,14 +297,15 @@ body {
     flex-shrink: 0;
 }
 .by-padula-one{
-    /* display: flex; */
     position: absolute;
-    bottom: 1rem;
-    right: 1.4rem;
+    width: max-content;
+    bottom: 2%;
+    /* right: 1.4rem; */
     font-size: 0.75rem;
     color: var(--muted-foreground);
     }
 .by-padula-one a {
+    width: max-content;
     color: var(--whatsapp);
     text-decoration: none;
 }
@@ -424,7 +426,56 @@ body {
 .hidden {
     display: none !important;
 }
+/* By */
+.by-padula-one{
+    position: static;
+    width: max-content;
+    padding: 8% 0 4% 0;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    }
+.by-padula-one a {
+    width: max-content;
+    color: var(--whatsapp);
+    text-decoration: none;
+}   
+/* Adsense */
+.adsense-left, .adsense-right {
+    position: absolute;
+    /* top: calc(50% - 30vh); */
+    align-self: center;
+    height: 20dvh;
+    max-height: 60dvh;
+    transform: translateX(-120%);
+    width: 15vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px dashed var(--muted-foreground);
+    z-index: 0;
+    opacity: 0;
 
+}
+.adsense-left{
+    animation: adsenseLeftSlide 0.8s ease-out 0.8s forwards;
+    left: 2%;
+}
+.adsense-right {
+    right: 2%;
+    left: auto;
+    transform: translateX(120%);
+    animation: adsenseRightSlide 0.8s ease-out 0.8s forwards;
+}
+@keyframes adsenseLeftSlide {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+@keyframes adsenseRightSlide {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
 /* Responsive */
 @media (min-width: 768px) {
     .main-title {
@@ -435,13 +486,37 @@ body {
         font-size: 0.875rem;
     }
 }
-
+@media (max-width: 730px) {
+    .hero{
+        justify-content: flex-start;
+    }
+    .adsense-left, .adsense-right {
+        position: absolute;
+        bottom: 8%;
+        width: 260px;
+        min-height: 24%;
+        max-height: 24%;
+    }
+}
 @media (max-width: 640px) {
+    .hero{
+        justify-content: flex-start;
+    }
     .container {
         max-width: 100%;
         padding: 1rem;
     }
-    
+
+    .title-section {
+        padding-top: calc(16% + 80px);
+    }
+    .adsense-left, .adsense-right {
+        position: absolute;
+        top: 16%;
+        width: 160px;
+        min-height: 24%;
+        max-height: 24%;
+    }
     .main-title {
         font-size: 2rem;
     }
@@ -452,4 +527,9 @@ body {
         left: 1rem;
         max-width: none;
     }
+    /* .by-padula-one{
+        position: static;
+        align-self: end;
+        margin-right: 4%;
+    } */
 }
