@@ -50,6 +50,7 @@ whatslink-generator/
 │   └── img/
 │       ├── logo-Padula-cor7.svg
 │       └── favicon/
+│       └── social/
 └── README.md
 ```
 
